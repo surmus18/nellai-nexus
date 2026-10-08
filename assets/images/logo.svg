@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <!-- Brand Name: NELLAI -->
+  <text x="10" y="32" font-family="'Inter', Arial, sans-serif" font-weight="900" font-size="28" fill="#d81b60" letter-spacing="1">NELLAI</text>
+  
+  <!-- Accent bar above NEXUS -->
+  <rect x="110" y="16" width="36" height="5" rx="2" fill="#d81b60" />
+  
+  <!-- Brand Name: NEXUS -->
+  <text x="10" y="70" font-family="'Inter', Arial, sans-serif" font-weight="900" font-size="44" fill="#16215c" letter-spacing="3">NEXUS</text>
+</svg>

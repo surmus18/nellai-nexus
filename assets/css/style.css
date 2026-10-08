@@ -1,0 +1,332 @@
+/*
+  Nellai Nexus Custom Stylesheet
+  Colors derived from visiting card:
+  - Deep Navy Blue: #16215c
+  - Accent Pink / Magenta: #d81b60
+  - Light Background: #f8fafc / #ffffff
+  Border Radius strictly 3px - 5px
+  Shadows subtle shadow-sm
+*/
+
+:root {
+  --nn-primary: #16215c;
+  --nn-primary-dark: #0f173f;
+  --nn-primary-light: #243280;
+  --nn-accent: #d81b60;
+  --nn-accent-dark: #ad1457;
+  --nn-accent-light: #fce4ec;
+  --nn-text-dark: #1e293b;
+  --nn-text-muted: #64748b;
+  --nn-bg-light: #f8fafc;
+  --nn-border: #e2e8f0;
+  --nn-radius: 4px; /* Strict 3-5px requirement */
+  --nn-shadow-sm: 0 1px 3px rgba(22, 33, 92, 0.08);
+  --nn-shadow-md: 0 4px 6px -1px rgba(22, 33, 92, 0.1);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--nn-text-dark);
+  background-color: var(--nn-bg-light);
+  line-height: 1.6;
+}
+
+/* Strict Border Radius Enforcement (3px - 5px) */
+.btn,
+.card,
+.form-control,
+.form-select,
+.input-group-text,
+.badge,
+.nav-pills .nav-link,
+.dropdown-menu,
+.modal-content,
+.alert,
+.img-thumbnail {
+  border-radius: var(--nn-radius) !important;
+}
+
+/* Subtle Shadows */
+.shadow-sm,
+.card,
+.dropdown-menu {
+  box-shadow: var(--nn-shadow-sm) !important;
+}
+
+.shadow-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.shadow-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--nn-shadow-md) !important;
+}
+
+/* Top Notification / Info Bar */
+.top-bar {
+  background-color: var(--nn-primary-dark);
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  border-bottom: 2px solid var(--nn-accent);
+}
+.top-bar a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.top-bar a:hover {
+  color: #ff80ab;
+}
+
+/* Main Navbar */
+.navbar-main {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--nn-border);
+  padding: 0.75rem 0;
+}
+.navbar-brand-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.brand-text-nellai {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  color: var(--nn-accent);
+  line-height: 1;
+}
+.brand-text-nexus {
+  font-weight: 900;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  color: var(--nn-primary);
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+}
+.brand-text-nexus::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 22px;
+  width: 14px;
+  height: 3px;
+  background-color: var(--nn-accent);
+  border-radius: 2px;
+}
+.brand-tagline {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--nn-text-muted);
+  letter-spacing: 1.5px;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: var(--nn-primary) !important;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.9rem !important;
+  transition: color 0.2s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--nn-accent) !important;
+}
+
+/* Buttons */
+.btn-nn-primary {
+  background-color: var(--nn-primary);
+  border-color: var(--nn-primary);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.55rem 1.25rem;
+}
+.btn-nn-primary:hover {
+  background-color: var(--nn-primary-light);
+  border-color: var(--nn-primary-light);
+  color: #ffffff;
+}
+
+.btn-nn-accent {
+  background-color: var(--nn-accent);
+  border-color: var(--nn-accent);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.55rem 1.25rem;
+}
+.btn-nn-accent:hover {
+  background-color: var(--nn-accent-dark);
+  border-color: var(--nn-accent-dark);
+  color: #ffffff;
+}
+
+.btn-nn-outline {
+  border: 1.5px solid var(--nn-primary);
+  color: var(--nn-primary);
+  background-color: transparent;
+  font-weight: 600;
+}
+.btn-nn-outline:hover {
+  background-color: var(--nn-primary);
+  color: #ffffff;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  border-bottom: 1px solid var(--nn-border);
+  padding: 4.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-badge {
+  background-color: var(--nn-accent-light);
+  color: var(--nn-accent-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Section Titles */
+.section-tag {
+  color: var(--nn-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.section-heading {
+  font-weight: 800;
+  color: var(--nn-primary);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Service & Rental Cards */
+.service-card {
+  border: 1px solid var(--nn-border);
+  background: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.service-card .card-img-wrap {
+  height: 190px;
+  overflow: hidden;
+  position: relative;
+  border-top-left-radius: var(--nn-radius);
+  border-top-right-radius: var(--nn-radius);
+}
+.service-card .card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.service-card:hover .card-img-wrap img {
+  transform: scale(1.05);
+}
+.service-card .service-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--nn-accent);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+}
+.service-card .card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Rental Item Pill Card */
+.rental-item-card {
+  border: 1px solid var(--nn-border);
+  background: #ffffff;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rental-number-badge {
+  background-color: var(--nn-primary);
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: var(--nn-radius);
+}
+
+/* Case Studies / Completed Works Card */
+.case-card {
+  border: 1px solid var(--nn-border);
+  background: #ffffff;
+  height: 100%;
+}
+.case-card .case-img {
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Footer */
+.footer-main {
+  background-color: var(--nn-primary-dark);
+  color: #94a3b8;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  border-top: 4px solid var(--nn-accent);
+}
+.footer-heading {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 2px;
+  background-color: var(--nn-accent);
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 0.92rem;
+}
+.footer-links a:hover {
+  color: #ff80ab;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.85rem;
+}
