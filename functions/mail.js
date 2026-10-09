@@ -45,10 +45,9 @@ export async function onRequestPost(context) {
         'Accept': 'application/json'
       },
       body: JSON.stringify({
-        sender: { name: 'Nellai Nexus', email: 'nellainexus@gmail.com' },
+        sender: { name: 'Nellai Nexus', email: 'tsurya894@gmail.com' },
         to: [
-          { email: 'tsurya894@gmail.com', name: 'Surya' },
-          { email: 'nellainexus@gmail.com', name: 'Nellai Nexus Admin' }
+          { email: 'tsurya894@gmail.com', name: 'Surya' }
         ],
         subject: `New Event Enquiry [${refId}]: ${service} - ${name}`,
         htmlContent: htmlBody

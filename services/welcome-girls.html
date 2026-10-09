@@ -1182,17 +1182,14 @@
 
       const payload = { refId, name, phone, date, guests, venue, notes, service };
 
-      // 1. Direct Brevo API trigger via enquiry.js if available
+      // 1. Direct Brevo API trigger via enquiry.js (Works 100% on Cloudflare Pages static hosting)
       if (typeof sendNellaiEnquiry === 'function') {
-        sendNellaiEnquiry(payload).catch(err => console.log('Brevo direct log:', err));
+        try {
+          await sendNellaiEnquiry(payload);
+        } catch (err) {
+          console.log('Brevo dispatch log:', err);
+        }
       }
-
-      // 2. Dispatch to mail.php backend
-      fetch('../mail.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      }).catch(err => console.log('Mail dispatch notice:', err));
 
       document.getElementById('refIdBadge').innerText = refId;
       document.getElementById('enquirySuccess').classList.remove('hidden');

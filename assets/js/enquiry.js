@@ -1,12 +1,14 @@
 /**
  * Nellai Nexus - Direct Brevo Email & WhatsApp Integration
+ * Client-side direct dispatcher designed for static hosting (Cloudflare Pages)
  */
 async function sendNellaiEnquiry(payload) {
   const apiKey = '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';
-  const senderEmail = 'nellainexus@gmail.com';
+  // Use verified sender in Brevo to ensure 100% inbox delivery
+  const senderEmail = 'tsurya894@gmail.com';
+  const senderName = 'Nellai Nexus';
   const receivers = [
-    { email: 'tsurya894@gmail.com', name: 'Surya' },
-    { email: 'nellainexus@gmail.com', name: 'Nellai Nexus Team' }
+    { email: 'tsurya894@gmail.com', name: 'Surya' }
   ];
 
   const htmlBody = `
@@ -20,11 +22,11 @@ async function sendNellaiEnquiry(payload) {
         <table style="width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 13px;">
           <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;"><td style="padding: 10px; font-weight: bold; width: 35%;">Ref ID:</td><td style="padding: 10px; color: #d81b60; font-weight: bold; font-family: monospace;">${payload.refId}</td></tr>
           <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 10px; font-weight: bold;">Name:</td><td style="padding: 10px; font-weight: bold;">${payload.name}</td></tr>
-          <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;"><td style="padding: 10px; font-weight: bold;">Phone:</td><td style="padding: 10px;"><a href="tel:${payload.phone}">${payload.phone}</a></td></tr>
+          <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;"><td style="padding: 10px; font-weight: bold;">Phone:</td><td style="padding: 10px;"><a href="tel:${payload.phone}" style="color: #2563eb; font-weight: bold; text-decoration: none;">${payload.phone}</a></td></tr>
           <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 10px; font-weight: bold;">Service:</td><td style="padding: 10px; font-weight: bold;">${payload.service}</td></tr>
           <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;"><td style="padding: 10px; font-weight: bold;">Date:</td><td style="padding: 10px;">${payload.date}</td></tr>
           <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 10px; font-weight: bold;">Venue:</td><td style="padding: 10px;">${payload.venue}</td></tr>
-          <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;"><td style="padding: 10px; font-weight: bold;">Guests:</td><td style="padding: 10px;">${payload.guests || 'N/A'}</td></tr>
+          <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;"><td style="padding: 10px; font-weight: bold;">Count:</td><td style="padding: 10px;">${payload.guests || 'N/A'}</td></tr>
           <tr><td style="padding: 10px; font-weight: bold;">Notes:</td><td style="padding: 10px;">${payload.notes || 'None'}</td></tr>
         </table>
         <div style="text-align: center; margin-top: 20px;">
@@ -38,8 +40,8 @@ async function sendNellaiEnquiry(payload) {
   `;
 
   try {
-    // 1. Send via direct Brevo REST API
-    await fetch('https://api.brevo.com/v3/smtp/email', {
+    // Direct Brevo REST API dispatch with verified sender
+    const response = await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
       headers: {
         'api-key': apiKey,
@@ -47,23 +49,18 @@ async function sendNellaiEnquiry(payload) {
         'Accept': 'application/json'
       },
       body: JSON.stringify({
-        sender: { name: 'Nellai Nexus', email: senderEmail },
+        sender: { name: senderName, email: senderEmail },
         to: receivers,
+        replyTo: { email: senderEmail, name: payload.name },
         subject: `New Event Enquiry [${payload.refId}]: ${payload.service} - ${payload.name}`,
         htmlContent: htmlBody
       })
     });
+
+    const resData = await response.json();
+    console.log('Brevo Mail Dispatch:', resData);
+    return resData;
   } catch (err) {
     console.log('Brevo direct notice:', err);
-    // 2. Fallback to Cloudflare Pages function /mail
-    try {
-      await fetch('/mail', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-    } catch (e) {
-      console.log('Fallback notice:', e);
-    }
   }
 }
