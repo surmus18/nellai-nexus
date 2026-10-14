@@ -13,6 +13,7 @@ nellai-nexus/
 │
 ├── index.html                 # Homepage with Hero Slider, Highlights, Quick Enquiry
 ├── services.html              # Full directory of all 12 Event Services
+├── resorts.html               # Resorts & Cottage Booking across Tamil Nadu
 ├── rentals.html               # Catalog of all 11 Banquet Rental Items
 ├── about.html                 # Company Story & Palayamkottai Office Hub
 ├── contact.html               # Contact Form, Office Directions & Map Info
