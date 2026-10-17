@@ -1,11 +1,11 @@
 {
-  "brevo_api_key": "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",
+  "brevo_api_key": "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",
   "sender_name": "Nellai Nexus",
-  "sender_email": "tsurya894@gmail.com",
+  "sender_email": "nellainexus@gmail.com",
   "admin_notification_emails": [
     {
-      "email": "tsurya894@gmail.com",
-      "name": "Surya"
+      "email": "nellainexus@gmail.com",
+      "name": "Nellai Nexus"
     }
   ],
   "office_phone": "+91 96262 72817",

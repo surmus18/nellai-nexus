@@ -40,14 +40,14 @@ export async function onRequestPost(context) {
     const brevoRes = await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
       headers: {
-        'api-key': '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',
+        'api-key': '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',
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
       body: JSON.stringify({
-        sender: { name: 'Nellai Nexus', email: 'tsurya894@gmail.com' },
+        sender: { name: 'Nellai Nexus', email: 'nellainexus@gmail.com' },
         to: [
-          { email: 'tsurya894@gmail.com', name: 'Surya' }
+          { email: 'nellainexus@gmail.com', name: 'Nellai Nexus' }
         ],
         subject: `New Event Enquiry [${refId}]: ${service} - ${name}`,
         htmlContent: htmlBody

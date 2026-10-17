@@ -21,8 +21,8 @@ if (file_exists($configFile)) {
 }
 
 $apiKey = $config['brevo_api_key'] ?? '';
-$adminEmail = $config['admin_notification_email'] ?? 'tsurya894@gmail.com';
-$senderEmail = $config['sender_email'] ?? 'tsurya894@gmail.com';
+$adminEmail = $config['admin_notification_email'] ?? 'nellainexus@gmail.com';
+$senderEmail = $config['sender_email'] ?? 'nellainexus@gmail.com';
 $senderName = $config['sender_name'] ?? 'Nellai Nexus';
 
 $rawInput = file_get_contents('php://input');

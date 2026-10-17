@@ -3,12 +3,12 @@
  * Client-side direct dispatcher designed for static hosting (Cloudflare Pages)
  */
 async function sendNellaiEnquiry(payload) {
-  const apiKey = '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';
+  const apiKey = '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';
   // Use verified sender in Brevo to ensure 100% inbox delivery
-  const senderEmail = 'tsurya894@gmail.com';
+  const senderEmail = 'nellainexus@gmail.com';
   const senderName = 'Nellai Nexus';
   const receivers = [
-    { email: 'tsurya894@gmail.com', name: 'Surya' }
+    { email: 'nellainexus@gmail.com', name: 'Nellai Nexus' }
   ];
 
   const htmlBody = `
