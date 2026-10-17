@@ -368,260 +368,549 @@
           <p class="text-slate-600 text-xs md:text-sm mt-1">Perfect for family vacations, couple getaways, weekend breaks, and reunions.</p>
         </div>
         <div class="text-xs text-slate-500">
-          Showing <span id="stayCount" class="font-bold text-brandNavy">6</span> hand-picked properties
+          Showing <span id="stayCount" class="font-bold text-brandNavy">16</span> hand-picked properties
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="staysGrid">
 
-        <!-- Stay Card 1: Courtallam Private Pool Villa -->
-        <div class="stay-card bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition duration-200 flex flex-col" data-destination="courtallam">
-          <div class="relative h-48 bg-slate-800 overflow-hidden group">
-            <img src="assets/images/resort_courtallam_villa.jpg" alt="Courtallam Waterfalls Luxury Pool Villa" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded">
-              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam (Main & Old Falls)
+        <!-- Stay Card: A1 Kerala Farm House -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('a1-kerala-farm-house', 1)">
+            <img src="assets/images/cottage/a1-kerala-farm-house/1.webp" alt="A1 Kerala Farm House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
             </span>
-            <span class="absolute top-3 right-3 bg-emerald-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded uppercase">
-              Top Rated
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
             </span>
-            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-xs text-white text-[11px] px-2 py-0.5 rounded flex items-center gap-1 font-semibold">
-              <i class="bi bi-water text-cyan-400"></i> Private Swimming Pool
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">A1 Kerala Farm House</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
             </div>
           </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
-                <span>3 BHK Luxury Farmhouse Villa</span>
-                <span class="text-amber-500 font-bold"><i class="bi bi-star-fill"></i> 4.9 (120+ stays)</span>
-              </div>
-              <h3 class="text-base font-bold text-brandNavy">Courtallam Cascade Private Pool Villa</h3>
-              <p class="text-xs text-slate-600 mt-2 line-clamp-2">
-                Situated close to Old Courtallam falls with private fenced swimming pool, open mango orchard, lush lawn, and hot water showers.
-              </p>
-              <!-- Amenities Badges -->
-              <div class="flex flex-wrap gap-1.5 mt-3">
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-water"></i> Private Pool</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-fire"></i> Campfire Area</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-snow"></i> AC Bedrooms</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-p-circle"></i> Car Parking</span>
-              </div>
-            </div>
-            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block uppercase font-bold">Starts From</span>
-                <span class="text-base font-extrabold text-brandPink">&#8377;4,999 <span class="text-xs font-normal text-slate-500">/ night</span></span>
-              </div>
-              <button onclick="selectStayForBooking('Courtallam Cascade Private Pool Villa', 'Courtallam')" class="bg-brandNavy hover:bg-brandNavyDark text-white text-xs font-bold px-3.5 py-2 rounded transition flex items-center gap-1">
-                <span>Enquire Now</span> <i class="bi bi-arrow-right"></i>
-              </button>
-            </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('a1-kerala-farm-house', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('A1 Kerala Farm House', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
           </div>
         </div>
 
-        <!-- Stay Card 2: Kodaikanal Mist Valley Wooden Cottage -->
-        <div class="stay-card bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition duration-200 flex flex-col" data-destination="kodaikanal">
-          <div class="relative h-48 bg-slate-800 overflow-hidden group">
-            <img src="assets/images/resort_kodaikanal_cottage.jpg" alt="Kodaikanal Mist Valley Cottage" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded">
-              <i class="bi bi-geo-alt-fill text-pink-400"></i> Kodaikanal (Naidupuram)
+        <!-- Stay Card: Akilesh Cottage -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('akilesh-cottage', 1)">
+            <img src="assets/images/cottage/akilesh-cottage/1.webp" alt="Akilesh Cottage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
             </span>
-            <span class="absolute top-3 right-3 bg-pink-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded uppercase">
-              Cloud View
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
             </span>
-            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-xs text-white text-[11px] px-2 py-0.5 rounded flex items-center gap-1 font-semibold">
-              <i class="bi bi-cloud-haze2 text-slate-300"></i> 180Â° Valley Panorama
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Akilesh Cottage</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
             </div>
           </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
-                <span>2 & 4 Bedroom Wooden Chalets</span>
-                <span class="text-amber-500 font-bold"><i class="bi bi-star-fill"></i> 4.8 (95+ stays)</span>
-              </div>
-              <h3 class="text-base font-bold text-brandNavy">Pine Valley Mist Wooden Cottage</h3>
-              <p class="text-xs text-slate-600 mt-2 line-clamp-2">
-                Wake up to floating clouds outside your glass balcony. Comes with wood-fired fireplace, campfire area, and home-cooked South Indian meals.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mt-3">
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-fire"></i> Bonfire & BBQ</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-wifi"></i> Fast Wi-Fi</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-egg-fried"></i> In-House Cook</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-tree"></i> Garden Lawn</span>
-              </div>
-            </div>
-            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block uppercase font-bold">Starts From</span>
-                <span class="text-base font-extrabold text-brandPink">&#8377;3,499 <span class="text-xs font-normal text-slate-500">/ night</span></span>
-              </div>
-              <button onclick="selectStayForBooking('Pine Valley Mist Wooden Cottage', 'Kodaikanal')" class="bg-brandNavy hover:bg-brandNavyDark text-white text-xs font-bold px-3.5 py-2 rounded transition flex items-center gap-1">
-                <span>Enquire Now</span> <i class="bi bi-arrow-right"></i>
-              </button>
-            </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('akilesh-cottage', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Akilesh Cottage', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
           </div>
         </div>
 
-        <!-- Stay Card 3: Ooty Heritage Tea Estate Bungalow -->
-        <div class="stay-card bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition duration-200 flex flex-col" data-destination="ooty">
-          <div class="relative h-48 bg-slate-800 overflow-hidden group">
-            <img src="assets/images/resort_ooty_tea_bungalow.jpg" alt="Ooty Heritage Tea Estate Bungalow" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded">
-              <i class="bi bi-geo-alt-fill text-pink-400"></i> Ooty / Coonoor Valley
+        <!-- Stay Card: Aruvi Cottage -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('aruvi-cottage', 1)">
+            <img src="assets/images/cottage/aruvi-cottage/1.webp" alt="Aruvi Cottage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
             </span>
-            <span class="absolute top-3 right-3 bg-emerald-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded uppercase">
-              Colonial
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
             </span>
-            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-xs text-white text-[11px] px-2 py-0.5 rounded flex items-center gap-1 font-semibold">
-              <i class="bi bi-cup-hot text-amber-300"></i> 40-Acre Tea Estate
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Aruvi Cottage</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
             </div>
           </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
-                <span>British Era Heritage Villa (4 BHK)</span>
-                <span class="text-amber-500 font-bold"><i class="bi bi-star-fill"></i> 4.9 (110+ stays)</span>
-              </div>
-              <h3 class="text-base font-bold text-brandNavy">Nilgiri Heritage Tea Plantation Villa</h3>
-              <p class="text-xs text-slate-600 mt-2 line-clamp-2">
-                A colonial heritage bungalow nestled in lush emerald tea gardens. Spacious fireplace living room, manicured lawn, and guided tea estate walking tours.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mt-3">
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-flower2"></i> Tea Garden View</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-fire"></i> Chimney Fireplace</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-heart"></i> Pet Friendly</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-cup"></i> Fresh Nilgiri Tea</span>
-              </div>
-            </div>
-            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block uppercase font-bold">Starts From</span>
-                <span class="text-base font-extrabold text-brandPink">&#8377;5,999 <span class="text-xs font-normal text-slate-500">/ night</span></span>
-              </div>
-              <button onclick="selectStayForBooking('Nilgiri Heritage Tea Plantation Villa', 'Ooty')" class="bg-brandNavy hover:bg-brandNavyDark text-white text-xs font-bold px-3.5 py-2 rounded transition flex items-center gap-1">
-                <span>Enquire Now</span> <i class="bi bi-arrow-right"></i>
-              </button>
-            </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('aruvi-cottage', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Aruvi Cottage', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
           </div>
         </div>
 
-        <!-- Stay Card 4: Yercaud Lakeview Coffee Estate Stay -->
-        <div class="stay-card bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition duration-200 flex flex-col" data-destination="yercaud">
-          <div class="relative h-48 bg-slate-800 overflow-hidden group">
-            <img src="assets/images/resort_yercaud_coffee_stay.jpg" alt="Yercaud Lakeview Coffee Estate Stay" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded">
-              <i class="bi bi-geo-alt-fill text-pink-400"></i> Yercaud (Near Lake & Pagoda Point)
+        <!-- Stay Card: Chitra Lodge -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('chitra-loge', 1)">
+            <img src="assets/images/cottage/chitra-loge/1.jpg" alt="Chitra Lodge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
             </span>
-            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-xs text-white text-[11px] px-2 py-0.5 rounded flex items-center gap-1 font-semibold">
-              <i class="bi bi-tree text-emerald-400"></i> Pepper & Coffee Grove
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
+            </span>
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Chitra Lodge</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
             </div>
           </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
-                <span>Family Suites & Treehouse Balconies</span>
-                <span class="text-amber-500 font-bold"><i class="bi bi-star-fill"></i> 4.7 (78+ stays)</span>
-              </div>
-              <h3 class="text-base font-bold text-brandNavy">Shevaroys Cloudview Coffee Plantation Stay</h3>
-              <p class="text-xs text-slate-600 mt-2 line-clamp-2">
-                Peaceful plantation retreat surrounded by silver oak trees and coffee blossoms. Easy road access, private campfire, and serene weather all year round.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mt-3">
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-fire"></i> Evening Bonfire</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-sun"></i> Sunrise Deck</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-controller"></i> Indoor Games</span>
-              </div>
-            </div>
-            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block uppercase font-bold">Starts From</span>
-                <span class="text-base font-extrabold text-brandPink">&#8377;2,999 <span class="text-xs font-normal text-slate-500">/ night</span></span>
-              </div>
-              <button onclick="selectStayForBooking('Shevaroys Cloudview Coffee Plantation Stay', 'Yercaud')" class="bg-brandNavy hover:bg-brandNavyDark text-white text-xs font-bold px-3.5 py-2 rounded transition flex items-center gap-1">
-                <span>Enquire Now</span> <i class="bi bi-arrow-right"></i>
-              </button>
-            </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('chitra-loge', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Chitra Lodge', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
           </div>
         </div>
 
-        <!-- Stay Card 5: Valparai Stream-side Forest Resort -->
-        <div class="stay-card bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition duration-200 flex flex-col" data-destination="valparai">
-          <div class="relative h-48 bg-slate-800 overflow-hidden group">
-            <img src="assets/images/resort_valparai_stream_retreat.jpg" alt="Valparai Forest River Retreat" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded">
-              <i class="bi bi-geo-alt-fill text-pink-400"></i> Valparai (Sholayar Belt)
+        <!-- Stay Card: Courtallam Cottage -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('courtallam-cottage', 1)">
+            <img src="assets/images/cottage/courtallam-cottage/1.jpg" alt="Courtallam Cottage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
             </span>
-            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-xs text-white text-[11px] px-2 py-0.5 rounded flex items-center gap-1 font-semibold">
-              <i class="bi bi-water text-cyan-400"></i> Natural Stream Inside Property
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
+            </span>
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Courtallam Cottage</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
             </div>
           </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
-                <span>Eco Nature Bungalow</span>
-                <span class="text-amber-500 font-bold"><i class="bi bi-star-fill"></i> 4.8 (64+ stays)</span>
-              </div>
-              <h3 class="text-base font-bold text-brandNavy">Anamalai Stream Valley Forest Retreat</h3>
-              <p class="text-xs text-slate-600 mt-2 line-clamp-2">
-                Tucked inside virgin tea estates and rolling mist of the Western Ghats. Watch Lion-tailed Macaques, enjoy natural forest dip, and pure mountain air.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mt-3">
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-compass"></i> Forest Safari</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-droplet-half"></i> Pure Stream Water</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-cup-straw"></i> Organic Meals</span>
-              </div>
-            </div>
-            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block uppercase font-bold">Starts From</span>
-                <span class="text-base font-extrabold text-brandPink">&#8377;3,800 <span class="text-xs font-normal text-slate-500">/ night</span></span>
-              </div>
-              <button onclick="selectStayForBooking('Anamalai Stream Valley Forest Retreat', 'Valparai')" class="bg-brandNavy hover:bg-brandNavyDark text-white text-xs font-bold px-3.5 py-2 rounded transition flex items-center gap-1">
-                <span>Enquire Now</span> <i class="bi bi-arrow-right"></i>
-              </button>
-            </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('courtallam-cottage', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Courtallam Cottage', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
           </div>
         </div>
 
-        <!-- Stay Card 6: ECR Beachfront Pool Villa -->
-        <div class="stay-card bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition duration-200 flex flex-col" data-destination="ecr">
-          <div class="relative h-48 bg-slate-800 overflow-hidden group">
-            <img src="assets/images/resort_ecr_beach_villa.jpg" alt="ECR Beachfront Private Pool Villa" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded">
-              <i class="bi bi-geo-alt-fill text-pink-400"></i> ECR / Mahabalipuram
+        <!-- Stay Card: Farmdean Holiday Home -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('farmdean-holiday-home', 1)">
+            <img src="assets/images/cottage/farmdean-holiday-home/1.avif" alt="Farmdean Holiday Home" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
             </span>
-            <span class="absolute top-3 right-3 bg-cyan-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded uppercase">
-              Beach Access
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
             </span>
-            <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-xs text-white text-[11px] px-2 py-0.5 rounded flex items-center gap-1 font-semibold">
-              <i class="bi bi-tsunami text-cyan-300"></i> 100m to Private Beach
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Farmdean Holiday Home</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
             </div>
           </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
-                <span>4 BHK Luxury Sea Villa</span>
-                <span class="text-amber-500 font-bold"><i class="bi bi-star-fill"></i> 4.9 (140+ stays)</span>
-              </div>
-              <h3 class="text-base font-bold text-brandNavy">Mahabalipuram Ocean Wave Private Pool Villa</h3>
-              <p class="text-xs text-slate-600 mt-2 line-clamp-2">
-                Direct beach path, private crystal-blue swimming pool, party terrace lawn, BBQ grill, and air-conditioned sea-facing bedrooms. Ideal for group parties.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mt-3">
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-water"></i> Private Pool</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-soundwave"></i> Party Music Allowed</span>
-                <span class="bg-slate-100 text-slate-700 text-[10px] font-medium px-2 py-0.5 rounded"><i class="bi bi-wind"></i> Sea Breeze Terrace</span>
-              </div>
-            </div>
-            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-slate-400 block uppercase font-bold">Starts From</span>
-                <span class="text-base font-extrabold text-brandPink">&#8377;8,999 <span class="text-xs font-normal text-slate-500">/ night</span></span>
-              </div>
-              <button onclick="selectStayForBooking('Mahabalipuram Ocean Wave Private Pool Villa', 'ECR')" class="bg-brandNavy hover:bg-brandNavyDark text-white text-xs font-bold px-3.5 py-2 rounded transition flex items-center gap-1">
-                <span>Enquire Now</span> <i class="bi bi-arrow-right"></i>
-              </button>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('farmdean-holiday-home', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Farmdean Holiday Home', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Stay Card: Gururaj Cottage -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('gururaj-cottage', 1)">
+            <img src="assets/images/cottage/gururaj-cottage/1.webp" alt="Gururaj Cottage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
+            </span>
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
+            </span>
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Gururaj Cottage</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
             </div>
           </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('gururaj-cottage', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Gururaj Cottage', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Stay Card: Hill View Cottage -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('hill-view', 1)">
+            <img src="assets/images/cottage/hill-view/1.webp" alt="Hill View Cottage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
+            </span>
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
+            </span>
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Hill View Cottage</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('hill-view', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Hill View Cottage', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Stay Card: Kings Cottage -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('kings-cottage', 1)">
+            <img src="assets/images/cottage/kings-cottage/1.avif" alt="Kings Cottage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
+            </span>
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 3 Photos
+            </span>
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Kings Cottage</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('kings-cottage', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (3)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Kings Cottage', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Stay Card: New Aathi Cottage -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('new-aathi-cottage', 1)">
+            <img src="assets/images/cottage/new-aathi-cottage/1.webp" alt="New Aathi Cottage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
+            </span>
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 4 Photos
+            </span>
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">New Aathi Cottage</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('new-aathi-cottage', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (4)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('New Aathi Cottage', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Stay Card: Panneer Bhavan Cottage -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('panner-bhavan-cottage', 1)">
+            <img src="assets/images/cottage/panner-bhavan-cottage/1.webp" alt="Panneer Bhavan Cottage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
+            </span>
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
+            </span>
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Panneer Bhavan Cottage</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('panner-bhavan-cottage', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Panneer Bhavan Cottage', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Stay Card: Ragavi Tourist House -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('ragavi-tourist-house', 1)">
+            <img src="assets/images/cottage/ragavi-tourist-house/1.webp" alt="Ragavi Tourist House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
+            </span>
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
+            </span>
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Ragavi Tourist House</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('ragavi-tourist-house', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Ragavi Tourist House', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Stay Card: Rose In Cottage -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('rose-in-cottage', 1)">
+            <img src="assets/images/cottage/rose-in-cottage/1.webp" alt="Rose In Cottage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
+            </span>
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
+            </span>
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Rose In Cottage</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('rose-in-cottage', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Rose In Cottage', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Stay Card: Saravanan Cottage -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('saravanan-cottage', 1)">
+            <img src="assets/images/cottage/saravanan-cottage/1.jpg" alt="Saravanan Cottage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
+            </span>
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
+            </span>
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Saravanan Cottage</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('saravanan-cottage', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Saravanan Cottage', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Stay Card: Shalom Villa Home Stay -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('shalom-villa-home-stay', 1)">
+            <img src="assets/images/cottage/shalom-villa-home-stay/1.jpg" alt="Shalom Villa Home Stay" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
+            </span>
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
+            </span>
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Shalom Villa Home Stay</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('shalom-villa-home-stay', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Shalom Villa Home Stay', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Stay Card: Thendral Cottage -->
+        <div class="stay-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-destination="courtallam">
+          <div class="relative h-60 bg-slate-900 overflow-hidden cursor-pointer" onclick="openCottageGallery('thendral-cottage', 1)">
+            <img src="assets/images/cottage/thendral-cottage/1.webp" alt="Thendral Cottage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+            
+            <span class="absolute top-3 left-3 bg-brandNavy/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-1 rounded shadow-sm">
+              <i class="bi bi-geo-alt-fill text-pink-400"></i> Courtallam
+            </span>
+            <span class="absolute top-3 right-3 bg-black/75 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10 group-hover:bg-brandPink transition">
+              <i class="bi bi-images"></i> 5 Photos
+            </span>
+
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs drop-shadow">
+              <span class="font-bold text-sm tracking-wide group-hover:text-pink-200 transition">Thendral Cottage</span>
+              <span class="text-[11px] bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="bi bi-arrows-fullscreen"></i> View Photos
+              </span>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white border-t border-slate-100 flex items-center gap-2.5 justify-between">
+            <button type="button" onclick="openCottageGallery('thendral-cottage', 1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 px-3 rounded transition flex items-center justify-center gap-1.5">
+              <i class="bi bi-images text-brandPink"></i>
+              <span>View Photos (5)</span>
+            </button>
+            <button type="button" onclick="selectStayForBooking('Thendral Cottage', 'Courtallam')" class="flex-1 bg-brandPink hover:bg-brandPinkDark text-white text-xs font-bold py-2.5 px-3 rounded shadow-sm transition flex items-center justify-center gap-1.5">
+              <span>Enquire Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <!-- No Stays Found Notice for Other Filters -->
+        <div id="noStaysNotice" class="hidden col-span-full py-12 text-center bg-white rounded-xl border border-slate-200 p-8 shadow-xs">
+          <div class="w-14 h-14 rounded-full bg-pink-100 text-brandPink flex items-center justify-center text-2xl mx-auto mb-3 font-bold">
+            <i class="bi bi-house-heart"></i>
+          </div>
+          <h3 class="text-base font-bold text-brandNavy">Looking for verified stays in this destination?</h3>
+          <p class="text-xs text-slate-500 mt-1 max-w-md mx-auto">We have unlisted verified holiday bungalows and pool villas in this region. Share your dates and group size on WhatsApp for instant photos and tariff.</p>
+          <a href="https://wa.me/919626272818?text=Hello%20Nellai%20Nexus,%20I%20am%20looking%20for%20cottage/resort%20options%20for%20my%20trip." target="_blank" class="inline-flex items-center gap-2 mt-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs px-5 py-2.5 rounded shadow transition">
+            <i class="bi bi-whatsapp"></i> WhatsApp Enquiry for This Destination
+          </a>
         </div>
 
       </div>
@@ -1035,6 +1324,14 @@
       });
       const countEl = document.getElementById('stayCount');
       if (countEl) countEl.innerText = visibleCount;
+      const noNotice = document.getElementById('noStaysNotice');
+      if (noNotice) {
+        if (visibleCount === 0) {
+          noNotice.classList.remove('hidden');
+        } else {
+          noNotice.classList.add('hidden');
+        }
+      }
     }
 
     // Select stay directly into form
@@ -1153,6 +1450,65 @@
       }, 4000);
     }
   </script>
+  <!-- Cottage Gallery Modal Lightbox -->
+  <div id="cottageGalleryModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex-col justify-between p-3 sm:p-6" role="dialog" aria-modal="true">
+    <!-- Modal Header -->
+    <div class="w-full max-w-5xl mx-auto flex items-center justify-between text-white pb-3 border-b border-white/10">
+      <div class="flex items-center gap-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-brandPink animate-pulse"></span>
+        <div>
+          <h3 id="galleryCottageTitle" class="text-base sm:text-lg font-bold text-white tracking-wide">Cottage Name</h3>
+          <p class="text-xs text-slate-400">Courtallam &bull; <span id="galleryCounter" class="text-pink-400 font-semibold">Photo 2 of 5</span> <span id="galleryPhotoLabel" class="ml-2 text-slate-300"></span></p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-2">
+        <button onclick="closeCottageGallery()" class="text-white hover:text-pink-400 bg-white/10 hover:bg-white/20 rounded-full w-9 h-9 flex items-center justify-center transition text-lg" title="Close Gallery (Esc)">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal Main Display Area -->
+    <div class="relative w-full max-w-5xl mx-auto flex-1 flex items-center justify-center my-3 min-h-[300px]">
+      <!-- Previous Button -->
+      <button onclick="prevGalleryImage()" class="absolute left-2 sm:left-4 z-20 text-white bg-black/60 hover:bg-brandPink/90 backdrop-blur-xs rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition shadow-lg border border-white/20" title="Previous Photo">
+        <i class="bi bi-chevron-left text-lg sm:text-xl"></i>
+      </button>
+
+      <!-- Main Active Image -->
+      <div class="relative w-full h-full max-h-[65vh] flex items-center justify-center overflow-hidden rounded-lg">
+        <img id="galleryMainImg" src="" alt="Cottage Photo" class="max-w-full max-h-[65vh] object-contain rounded-lg shadow-2xl transition-all duration-300">
+      </div>
+
+      <!-- Next Button -->
+      <button onclick="nextGalleryImage()" class="absolute right-2 sm:right-4 z-20 text-white bg-black/60 hover:bg-brandPink/90 backdrop-blur-xs rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition shadow-lg border border-white/20" title="Next Photo">
+        <i class="bi bi-chevron-right text-lg sm:text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Modal Footer: Thumbnails + Quick Actions -->
+    <div class="w-full max-w-5xl mx-auto pt-3 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <!-- Thumbnail strip -->
+      <div id="galleryThumbnails" class="flex items-center gap-2 overflow-x-auto max-w-full py-1">
+      </div>
+
+      <!-- Quick Actions inside Gallery -->
+      <div class="flex items-center gap-2 w-full sm:w-auto shrink-0">
+        <a id="galleryWhatsAppBtn" href="#" target="_blank" class="flex-1 sm:flex-initial bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs px-4 py-2.5 rounded shadow transition flex items-center justify-center gap-1.5">
+          <i class="bi bi-whatsapp"></i> <span>WhatsApp Enquiry</span>
+        </a>
+        <button onclick="bookFromGallery()" class="flex-1 sm:flex-initial bg-brandPink hover:bg-brandPinkDark text-white font-bold text-xs px-4 py-2.5 rounded shadow transition flex items-center justify-center gap-1.5">
+          <i class="bi bi-calendar-check"></i> <span>Enquire Now</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cottage Data & Lightbox Script -->
+  <script src="assets/js/cottages-data.js"></script>
+  <script src="assets/js/cottages-gallery.js"></script>
+
 </body>
 </html>
 
