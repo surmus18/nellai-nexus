@@ -1,0 +1,7 @@
+.git
+.github
+.gitignore
+.wrangler
+README.md
+node_modules
+*.log
